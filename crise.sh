@@ -23,7 +23,7 @@ echo "$proce $users $cpu $ram $disk"
 
 info="voici les caracteristiques critiques : "
 # if (( $(echo "$proce > $max_proce" | bc -l) )); then
-if [ "$proce" -gt "$max_proce" ]; then
+if [ "$proce" -gt "$max_proc" ]; then
 info="$info processus ($proce),"
 fi
 
@@ -31,7 +31,7 @@ if [ "$users" -gt "$max_user" ]; then
 info="$info users ($users),"
 fi
 
-if[ "$cpu" -gt "$max_cpu" ]; then
+if [ "$cpu" -gt "$max_cpu" ]; then
 info="$info cpu ($cpu),"
 fi
 
