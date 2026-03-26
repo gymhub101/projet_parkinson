@@ -2,5 +2,5 @@ max_proc:0
 max_user:0
 max_cpu:0
 max_ram:0
-max_disk:0
+max_disk:-1
 max_hist:5
