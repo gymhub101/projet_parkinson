@@ -22,6 +22,7 @@ echo "$proce $users $cpu $ram $disk"
 #CANT COMPARE FLOAT AND INT THATS WHY ERROR
 
 info="voici les caracteristiques critiques : "
+mailing=true
 # if (( $(echo "$proce > $max_proce" | bc -l) )); then
 if [ "$proce" -gt "$max_proc" ]; then
 info="$info processus ($proce),"
