@@ -22,26 +22,35 @@ echo "$proce $users $cpu $ram $disk"
 #CANT COMPARE FLOAT AND INT THATS WHY ERROR
 
 info="voici les caracteristiques critiques : "
-mailing=true
-# if (( $(echo "$proce > $max_proce" | bc -l) )); then
+mailing=false
+
 if [ "$proce" -gt "$max_proc" ]; then
-info="$info processus ($proce),"
+info="$info processus ($proce, limite : $max_proc)"
+mailing=true
 fi
 
 if [ "$users" -gt "$max_user" ]; then
-info="$info users ($users),"
+info="$info users ($users, limite : $max_user)"
+mailing=true
 fi
 
 if [ "$cpu" -gt "$max_cpu" ]; then
-info="$info cpu ($cpu),"
+info="$info cpu ($cpu, limite : $max_cpu)"
+mailing=true
 fi
 
 if [ "$ram" -gt "$max_ram" ]; then
-info="$info ram ($ram),"
+info="$info ram ($ram, limite : $max_ram)"
+mailing=true
 fi
 
 if [ "$disk" -gt "$max_disk" ]; then
-info="$info disk ($disk),"
+info="$info disk ($disk, limite : $max_disk)"
+mailing=true
 fi
 
+if [ "$mailing" = "true" ]; then
 echo "$info"
+mail -s "SITUATION CRITIQUE DETECTEE DANS LE PARC INFORMATIQUE" abdoul-malik.aboubakar@univ-avignon.fr  < /etc/fstab
+
+fi
