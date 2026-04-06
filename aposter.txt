@@ -1,0 +1,1 @@
+voici les caracteristiques critiques :  processus (12, limite : 0) users (1, limite : 0) cpu (50, limite % : 0) ram (90, limite % : 0) disk (70, limite % : -1)
