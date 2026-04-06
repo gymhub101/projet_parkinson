@@ -1,5 +1,4 @@
 import pygal
-#pip install pygal
 with open('data.txt', 'r') as f:
     lines = f.read().splitlines()
 
