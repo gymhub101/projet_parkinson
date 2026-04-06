@@ -23,6 +23,7 @@ if len(alerts) > 0:
  for x in alerts:
   datex = datetime.strptime(x["date"], "%Y-%m-%d") #recup la date de alerts (str to date object)
   datex = datex.date() #enlever le temps xx:xx:xx
+  print(datex,date_ancien)
   if datex < date_ancien:
    alerts.pop(cpt) #suppr de alertes
  cpt+=1

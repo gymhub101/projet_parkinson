@@ -8,14 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>CERT-FR</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 18 Mar 2026 13:17:56 +0000</lastBuildDate>
-    <item>
-      <title>Multiples vulnérabilités dans AMI MegaRAC (16 décembre 2022)</title>
-      <link>https://www.cert.ssi.gouv.fr/alerte/CERTFR-2022-ALE-014/</link>
-      <description>Le 05 décembre 2022, trois vulnérabilités respectivement identifiées par les numéros CVE-2022-40259, CVE-2022-40242 et CVE-2022-2827 ont été signalées dans la solution d’administration à distance MegaRAC de l’éditeur AMI. La solution MegaRAC s’appuie sur un BMC (Baseboard Management Controller) :...</description>
-      <guid isPermaLink="true">https://www.cert.ssi.gouv.fr/alerte/CERTFR-2022-ALE-014/</guid>
-      <pubDate>Fri, 16 Dec 2022 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 03 Apr 2026 12:43:14 +0000</lastBuildDate>
     <item>
       <title>Vulnérabilité dans les produits Microsoft (12 juillet 2023)</title>
       <link>https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-006/</link>
@@ -36,13 +29,6 @@
       <description>Le 18 juillet 2023, Citrix a publié un avis de sécurité concernant plusieurs vulnérabilités. La plus critique, dont l'identifiant CVE est CVE-2023-3519, permet à un attaquant non authentifié d'exécuter du code arbitraire à distance. L'équipement est vulnérable s'il est configuré en tant que...</description>
       <guid isPermaLink="true">https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-008/</guid>
       <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>[MàJ] Multiples vulnérabilités dans Ivanti Endpoint Manager Mobile (26 juillet 2023)</title>
-      <link>https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-009/</link>
-      <description>\[Mise à jour du 15 septembre 2023\] Correction de la vulnérabilité CVE-2023-35082 Le 21 août 2023, l'éditeur a publié une mise à jour du bulletin complémentaire de sécurité \[3\] pour annoncer la disponibilité d'un correctif concernant la vulnérabilité CVE-2023-35082. Ce correctif est inclus...</description>
-      <guid isPermaLink="true">https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-009/</guid>
-      <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Multiples vulnérabilités dans Exim (02 octobre 2023)</title>
@@ -288,6 +274,20 @@
       <description>Une vulnérabilité a été découverte dans Cisco Catalyst SD-WAN. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité. Cisco indique que la vulnérabilité CVE-2026-20127 est activement exploitée.</description>
       <guid isPermaLink="true">https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-002/</guid>
       <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Note d’alerte – Ciblage des messageries instantanées (20 mars 2026)</title>
+      <link>https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-003/</link>
+      <description>Les travaux conjoints des services membres du **Centre de Coordination des Crises Cyber (C4)** ont permis d’identifier une recrudescence de campagnes d’attaques ciblant les comptes de messagerie instantanées. Ces campagnes ciblent particulièrement les secteurs régaliens (personnalités politiques,...</description>
+      <guid isPermaLink="true">https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-003/</guid>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Vulnérabilité dans F5 BIG-IP Access Policy Manager (31 mars 2026)</title>
+      <link>https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-004/</link>
+      <description>Le 15 octobre 2025, F5 a publié un avis de sécurité concernant entre autres la vulnérabilité CVE-2025-53521. Celle-ci affecte BIG-IP APM et permet à un attaquant non authentifié d'exécuter du code à distance. Le 29 mars 2026, l'éditeur indique que cette vulnérabilité est exploitée activement. Le...</description>
+      <guid isPermaLink="true">https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-004/</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

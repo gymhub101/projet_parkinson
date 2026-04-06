@@ -1,5 +1,15 @@
 import pygal
-#pip install pygal
+import os
+
+a = "machine.svg"
+b = "machine.png"
+
+if os.path.exists(a):
+ os.remove(a)
+
+if os.path.exists(b):
+ os.remove(b)
+
 with open('data.txt', 'r') as f:
     lines = f.read().splitlines()
 
@@ -12,13 +22,13 @@ disk1  = [int(x) for x in lines[4].strip('[]').split(',')]
 date1  = lines[5].strip('[]').split(',')
 
 agraphe = pygal.Line(x_label_rotation=20)
-agraphe.title = 'caractéristiques machine'
+agraphe.title = 'caracteristiques machine'
 agraphe.x_labels = date1
 
-agraphe.add('Nb Process', proce1, secondary=True)  
-agraphe.add('Nb Users', users1, secondary=True) 
-agraphe.add('CPU (%)', cpu1)      
-agraphe.add('RAM (%)', ram1) 
-agraphe.add('Disk (%)', disk1)     
+agraphe.add('Nb Process', proce1, secondary=True)
+agraphe.add('Nb Users', users1, secondary=True)
+agraphe.add('CPU (%)', cpu1)
+agraphe.add('RAM (%)', ram1)
+agraphe.add('Disk (%)', disk1)
 
 agraphe.render_to_file('machine.svg')

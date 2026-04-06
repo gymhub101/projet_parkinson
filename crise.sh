@@ -26,11 +26,11 @@ disk1="[$(grep disk info_sh.txt | tail -n "$max_histo"  | cut -d':' -f2 | tr -d 
 
 date1="[$(grep 2026 info_sh.txt | tail -n "$max_histo" | sed -E '
 s/^[a-zéû\.]+ //;
-s/janvier/01/; s/février/02/;              
+s/janvier/01/; s/février/02/;
 s/mars/03/; s/avril/04/; s/mai/05/;
 s/juin/06/; s/juillet/07/; s/août/08/;
 s/septembre/09/; s/octobre/10/; s/novembre/11/; s/décembre/12/;
-s/ UTC$//                            
+s/ UTC$//
 ' | awk '{print $1"/"$2"/"$3" "$4}' | tr '\n' ',' | sed 's/,$//')]"
 
 echo $proce1 > data.txt
