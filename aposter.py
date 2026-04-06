@@ -1,19 +1,36 @@
-import smtplib, ssl
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+import cairosvg  
 
-with open("aposter.txt", 'r' ) as f:
-    a = f.readlines()
+sender = "Johnbagger288@gmail.com"
+receiver = "Johnbagger288@gmail.com"
+password = "axpunwmvzdwzdysf"
 
-if a != "":
-    port = 465 # c le port SMTP OVER SSL SUR INTERNET
-    serv_smtp = "smtp.gmail.com"
-    envoyer= "johnbagger288@gmail.com"
-    recevoir = "johnbagger288@gmail.com"
-    mdp = "axpunwmvzdwzdysf"
-    message = """\
-    Subject: Hi there
-    This message is sent from Python."""
+svg_file = "machine.svg"
+png_file = "machine.png"
 
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL(serv_smtp, port, context=context) as serveur:
-        serveur.login(envoyer, mdp)
-        serveur.sendmail(envoyer, recevoir, message)
+cairosvg.svg2png(url=svg_file, write_to=png_file)
+
+msg = MIMEMultipart()
+msg['From'] = sender
+msg['To'] = receiver
+msg['Subject'] = "alerte fatale parc informatique situation de crise !!!"
+
+body = "Le graphe affichant les données de machine est joint ci-dessous."
+msg.attach(MIMEText(body, 'plain'))
+
+with open(png_file, "rb") as f:
+    part = MIMEBase('image', 'png')
+    part.set_payload(f.read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', f'attachment; filename="{png_file}"')
+    msg.attach(part)
+
+with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+    server.login(sender, password)
+    server.send_message(msg)
+
+print("Email with PNG attached successfully!")
