@@ -11,7 +11,7 @@ disk1  = [int(x) for x in lines[4].strip('[]').split(',')]
 date1  = lines[5].strip('[]').split(',')
 
 agraphe = pygal.Line(x_label_rotation=20)
-agraphe.title = 'caractéristiques machine'
+agraphe.title = 'caracteristiques machine'
 agraphe.x_labels = date1
 
 agraphe.add('Nb Process', proce1, secondary=True)  
