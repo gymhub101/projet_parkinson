@@ -33,12 +33,14 @@ s/septembre/09/; s/octobre/10/; s/novembre/11/; s/décembre/12/;
 s/ UTC$//
 ' | awk '{print $1"/"$2"/"$3" "$4}' | tr '\n' ',' | sed 's/,$//')]"
 
-echo $proce1 > data.txt
-echo $users1 >> data.txt
-echo $cpu1 >> data.txt
-echo $ram1 >> data.txt
-echo $disk1 >> data.txt
-echo $date1 >> data.txt
+data_path="/home/uapv2501404/projet_parkinson/data.txt"
+
+echo "$proce1" > "$data_path"
+echo "$users1" >> "$data_path"
+echo "$cpu1" >> "$data_path"
+echo "$ram1" >> "$data_path"
+echo "$disk1" >> "$data_path"
+echo "$date1" >> "$data_path"
 
 info="voici les caracteristiques critiques : "
 mailing=false
@@ -70,7 +72,7 @@ fi
 
 
 if [ "$mailing" = "true" ]; then
-echo "$info" > aposter.txt
+echo "$info" > /home/uapv2501404/projet_parkinson/aposter.txt
 else
-echo > aposter.txt
+echo > /home/uapv2501404/projet_parkinson/aposter.txt
 fi
