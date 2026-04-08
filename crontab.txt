@@ -28,6 +28,6 @@
 0 1 * * 1 bash /home/uapv2501404/projet_parkinson/parser.sh
 0 1 * * 1 python3 /home/uapv2501404/projet_parkinson/parser.py
 0 1 1 * * cp /home/uapv2501404/projet_parkinson/alerte.json > /home/uapv2501404/projet_parkinson/save.json  
-*/5 * * * * bash /home/uapv2501404/projet_parkinson/crise.sh
-*/5 * * * * python3 /home/uapv2501404/projet_parkinson/agrapher.py
+* * * * * bash /home/uapv2501404/projet_parkinson/crise.sh
+* * * * * python3 /home/uapv2501404/projet_parkinson/agrapher.py
 */5 * * * * python3 /home/uapv2501404/projet_parkinson/aposter.py
