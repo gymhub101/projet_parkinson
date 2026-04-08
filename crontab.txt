@@ -31,3 +31,4 @@
 * * * * * bash /home/uapv2501404/projet_parkinson/crise.sh
 * * * * * python3 /home/uapv2501404/projet_parkinson/agrapher.py
 */5 * * * * python3 /home/uapv2501404/projet_parkinson/aposter.py
+* * * * * bash /home/uapv2501404/projet_parkinson/remote_vm/interface.sh
